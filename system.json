@@ -85,7 +85,7 @@
   "secondaryTokenAttribute": "power",
   "socket": true,
   "manifest": "https://github.com/cragstone/brp/releases/latest/download/system.json",
-  "download": "https://github.com/cragstone/brp/releases/download/13.56/BRP.zip",
+  "download": "https://github.com/cragstone/brp/releases/download/13.56/brp.zip",
   "license": "LICENSE.txt",
   "changelog": "CHANGELOG.md"
 }
