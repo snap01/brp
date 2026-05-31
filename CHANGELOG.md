@@ -1,5 +1,8 @@
 # CHANGE LOG
 
+## 14.4
+- Hotfix for a missing comma in actor.mjs
+
 ## 14.3
 - When the system creates items/ators and you've chosen for the BRPID to be autocreated it will now use the game language and set the priority to 0.
 - Selected language on the BRPID Editor sheet should now show properly (rather than always showing English)

@@ -609,7 +609,7 @@ export class BRPActor extends Actor {
       let tempID = await BRPID.guessId(actor)
       if (tempID) {
         await actor.update({ 
-          'flags.brp.brpidFlag.id': tempID 
+          'flags.brp.brpidFlag.id': tempID, 
           'flags.brp.brpidFlag.lang': game.i18n.lang,
           'flags.brp.brpidFlag.priority': 0
         })
