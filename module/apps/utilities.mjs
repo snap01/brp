@@ -290,4 +290,9 @@ export class BRPUtilities {
     }
   }
 
+ static async openWiki() {
+    const url = "https://github.com/cragstone/brp/wiki";
+    window.open(url, "_blank");
+  }
+
 }

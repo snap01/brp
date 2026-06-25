@@ -59,12 +59,18 @@ export class BRPMenu {
         beastiary: {
           toggle: true,
           icon: 'fas fa-book-open-cover',
-          //class: 'xp_toggle',
           name: 'beastiary',
           active: game.settings.get('brp', 'beastiary'),
           title: 'BRP.beastiaryMode',
           onChange: async toggle => await BRPUtilities.beastiaryMode(toggle)
         },
+        assistance: {
+          button: true,
+          icon: 'fas fa-circle-question',
+          name: 'assistance',
+          title: 'BRP.help',
+          onChange: async () => await BRPUtilities.openWiki()
+        },        
       }
     }
     if (Array.isArray(controls)) {

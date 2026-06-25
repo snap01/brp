@@ -1,5 +1,8 @@
 # CHANGE LOG
 
+## 14.6
+- There's a help icon on the character sheet and on the GM tools that open's the system Wiki from Github in a browser window.
+
 ## 14.5
 - Chaosium Canvas Interface updated for V14 layers (thanks to James B)
 - A few CSS tweaks for Skills List on character sheet

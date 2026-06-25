@@ -69,6 +69,7 @@ export class BRPActorSheetV2 extends api.HandlebarsApplicationMixin(sheets.Actor
       redistStat: this._onRedisttibuteStats,
       xpRolls: this._onXPRolls,
       powImprove: this._onPowImprove,
+      openWiki: this._openWiki,
     }
   }
 
@@ -618,7 +619,10 @@ export class BRPActorSheetV2 extends api.HandlebarsApplicationMixin(sheets.Actor
     await BRPCharDev.powImprov(this.document, this.document.token, type)
   }
 
-
+  //Open Wili
+  static async _openWiki(event,target) {
+    BRPUtilities.openWiki()
+  }
 
 
     //--------------------HANDLER----------------------------------

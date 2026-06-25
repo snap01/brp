@@ -11,6 +11,7 @@
         {{/unless}}
       </div>
       <div class="lock-icon" style="max-height: 58px">
+         <a class="" data-tooltip="{{ localize 'BRP.help'}}" data-action="openWiki"><i class="fas fa-circle-question"></i></a>
         {{#if isLocked}}
           <a data-action="actorToggle" data-property="lock" data-tooltip='{{localize "BRP.lock"}}'>
                 <i class="fas fa-lock"></i>
