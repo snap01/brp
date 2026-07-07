@@ -37,7 +37,7 @@ export class BRPActor extends Actor {
   }
 
   //Prepare Character specific data
-  async _prepareCharacterData(actorData) {
+  _prepareCharacterData(actorData) {
     if (actorData.type !== 'character') return;
     const systemData = actorData.system;
     this._prepStats(actorData)
@@ -312,7 +312,7 @@ export class BRPActor extends Actor {
   }
 
   //Prepare NPC specific data.
-  async _prepareNpcData(actorData) {
+  _prepareNpcData(actorData) {
     if (actorData.type !== 'npc') return;
     const systemData = actorData.system;
     this._prepStats(actorData)
@@ -608,8 +608,8 @@ export class BRPActor extends Actor {
     if (game.settings.get('brp', "actorBRPID")) {
       let tempID = await BRPID.guessId(actor)
       if (tempID) {
-        await actor.update({ 
-          'flags.brp.brpidFlag.id': tempID, 
+        await actor.update({
+          'flags.brp.brpidFlag.id': tempID,
           'flags.brp.brpidFlag.lang': game.i18n.lang,
           'flags.brp.brpidFlag.priority': 0
         })
