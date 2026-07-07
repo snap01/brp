@@ -26,10 +26,6 @@ export default class BRPItemHitLocationModel extends BRPItemModel {
 
       // Non persisted fields
       maxHP: new fields.NumberField({ ...BRPItemModel.requiredInteger, persisted: false }),
-
-      // Unused fields
-      // map
-      // wounds
     }
   }
 }

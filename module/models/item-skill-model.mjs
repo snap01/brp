@@ -25,7 +25,7 @@ export default class BRPItemSkillModel extends BRPItemModel {
         Func: new fields.StringField({ choices: BRPSelectLists.getFunctionalOptions(), initial: 'or' }),
       }),
       noXP: new fields.BooleanField({ initial: false }),
-      category: new fields.StringField({ }), // Improve
+      category: new fields.StringField({ initial: '' }),
       chosen: new fields.BooleanField({ initial: false }),
       specialism: new fields.BooleanField({ initial: false }),
       group: new fields.BooleanField({ initial: false }),
@@ -44,8 +44,6 @@ export default class BRPItemSkillModel extends BRPItemModel {
       improve: new fields.BooleanField({ initial: false }),
       basic: new fields.BooleanField({ initial: false }),
       combat: new fields.BooleanField({ initial: false }),
-
-      // subType unused
     }
   }
 }

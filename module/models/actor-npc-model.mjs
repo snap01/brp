@@ -12,7 +12,7 @@ export default class BRPActorNpcModel extends BRPActorModel {
       moveTitle: new fields.StringField({ initial: 'Move' }),
       move: new fields.NumberField({ ...BRPActorModel.requiredInteger }),
       altMoveTitle: new fields.StringField({ initial: 'Alt Move' }),
-      altMove: new fields.StringField({ initial: '0' }),
+      altMove: new fields.NumberField({ ...BRPActorModel.requiredInteger }),
       lock: new fields.BooleanField({ initial: false }),
       viewTab: new fields.NumberField({ choices: [1, 2], initial: 2 }),
       showNotes: new fields.BooleanField({ initial: false }),
@@ -69,5 +69,15 @@ export default class BRPActorNpcModel extends BRPActorModel {
       // Legacy fields used for data migration
       description: new fields.StringField({ initial: '' }),
     }
+  }
+
+  static migrateData (source) {
+    if (typeof source.move !== 'undefined' && isNaN(Number(source.move.toString().trim() || 'X'))) {
+      source.move = 0
+    }
+    if (typeof source.altMove !== 'undefined' && isNaN(Number(source.altMove.toString().trim() || 'X'))) {
+      source.altMove = 0
+    }
+    return super.migrateData(source)
   }
 }

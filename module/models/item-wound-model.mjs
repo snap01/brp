@@ -7,9 +7,6 @@ export default class BRPItemWoundModel extends BRPItemModel {
       value: new fields.NumberField({ ...BRPItemModel.requiredInteger, initial: 1 }),
       treated: new fields.BooleanField({ initial: false }),
       locId: new fields.StringField({ initial: '' }),
-
-      // unused
-      // created
     }
   }
 }
